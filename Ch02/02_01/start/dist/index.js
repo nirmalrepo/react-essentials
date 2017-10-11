@@ -1,13 +1,18 @@
 /**
  * Created by nirmal on 10/5/17.
  */
-const title = React.createElement(
+
+//ES6 Destructure
+const { createElement } = React;
+const { render } = ReactDOM;
+
+const title = createElement(
     'h1',
-    {id:'title', className:'header'},
-    "Hello World"
+    {id: 'title', className: 'header', style:style},
+    'Hello World'
 );
 
-ReactDOM.render(
+render(
     title,
     document.getElementById('react-container')
 );
