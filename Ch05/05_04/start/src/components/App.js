@@ -6,6 +6,7 @@ import { Menu } from './Menu'
 
 export class App extends Component {
 	constructor(props) {
+		console.log('Props', props)
 		super(props)
 		this.state = {
 			allSkiDays: [
@@ -49,7 +50,7 @@ export class App extends Component {
 							 	)}/> :
 			 (this.props.location.pathname === "/add-day") ?
 			 	<AddDayForm /> :
-			 	<SkiDayList days={this.state.allSkiDays}/>				 
+			 	<SkiDayList days={this.state.allSkiDays} filter={this.props.params.filter}/>
 			}
 					
 			</div>
